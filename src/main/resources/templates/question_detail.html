@@ -1,5 +1,5 @@
-<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
-<div class="container my-3">
+<html layout:decorate="~{layout}">
+<div layout:fragment="content" class="container my-3">
     <!-- 질문 -->
 	<h2 class="border-bottom py-2" th:text="${question.subject}"></h2>
 	<div class="card my-3">
@@ -36,3 +36,4 @@
 	<!-- static 디렉터리에 style.css 파일이 위치하지만 /static/style.css 대신 /style.css로 작성해야 함에 주의하자. 
 	왜냐하면 static 디렉터리가 스태틱 파일들의 루트 디렉터리이므로 적을 필요가 없기 때문이다. -->
 </div>
+</html>
