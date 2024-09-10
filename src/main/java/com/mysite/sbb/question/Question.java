@@ -39,6 +39,8 @@ public class Question {
 	@ManyToOne
     private SiteUser author;
 	
+	private LocalDateTime modifyDate;
+	
 	/*
 	 * 엔티티의 속성 이름과 테이블의 열 이름의 차이를 알아보자 Question 엔티티에서 작성 일시에 해당하는 createDate 속성의 이름은
 	 * 데이터베이스의 테이블에서는 create_date라는 열 이름으로 설정된다. 즉, createDate처럼 카멜 케이스(camel case)
