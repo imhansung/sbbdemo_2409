@@ -2,6 +2,7 @@ package com.mysite.sbb.question;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 import com.mysite.sbb.answer.Answer;
 import com.mysite.sbb.user.SiteUser;
@@ -12,6 +13,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
@@ -40,6 +42,9 @@ public class Question {
     private SiteUser author;
 	
 	private LocalDateTime modifyDate;
+	
+	@ManyToMany
+    Set<SiteUser> voter;
 	
 	/*
 	 * 엔티티의 속성 이름과 테이블의 열 이름의 차이를 알아보자 Question 엔티티에서 작성 일시에 해당하는 createDate 속성의 이름은
